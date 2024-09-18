@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { AppBar, Toolbar, Typography, Box, Button, } from '@mui/material';
+import { AppBar, Typography, Box, Button, } from '@mui/material';
 import { styled } from '@mui/system'
 import { ThemeProvider, useTheme } from '@mui/material/styles';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 // import hills from './assets/hillsDuplicated.png'
 // import clouds from './assets/clouds.png'
 import "./App.css"
-import BasicMenu from './BasicMenu.jsx'
+import MainBanner from './MainBanner'
 
 export default function App() {
 
@@ -18,25 +17,11 @@ export default function App() {
     borderRadius: 7
   }))
 
-  const Banner = styled(AppBar)(({theme}) => ({
-    position: "sticky",
-    display: "flex",
-    flexDirection: "row",
-    alignItems : "center",
-    height: "10%"
-  }))
-
   return (
     <ThemeProvider theme={theme}>
       <div className="page" style={{height: screen.height}}>
 
-        <Banner>
-          <DirectionsRunIcon sx={{ width: theme.spacing(3.5), margin: theme.spacing(2) }}/>
-          <Toolbar style={{ padding: 0 }}>
-            <Typography variant='h2'>Run Planner</Typography>
-          </Toolbar>
-          <BasicMenu sx={{ marginLeft:"auto", marginRight: 2 }}/>
-        </Banner> 
+        <MainBanner></MainBanner>
 
         <Box sx={{ "mt" : 4 }}>
           <Typography align="center">
