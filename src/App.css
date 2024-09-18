@@ -1,0 +1,33 @@
+@keyframes hills-anim {
+    from { right: 0px; }
+    to { right: 3000px; }
+}
+
+@keyframes clouds-anim {
+    from { right: 3000px; }
+    to { right: 0000px; }
+}
+
+.clouds {
+    position: relative;
+    top: 10px;
+    z-index: 1;
+    animation-name: clouds-anim;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.hills {
+    position: relative;
+    animation-name: hills-anim;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    bottom: 200px;
+    z-index: 0;
+}
+
+* {
+    overflow: hidden;
+}
